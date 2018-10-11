@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/config/config.js"></script>
+    <script src="js/utils/utils.js"></script>
+    <script src="js/utils/res.js"></script>
+    <script src="js/class/scene.js"></script>
+    <script src="js/class/cooldown.js"></script>
+    <script src="js/class/element.js"></script>
+    <script src="js/class/animation.js"></script>
+    <script src="js/class/plane.js"></script>
+    <script src="js/class/bullet.js"></script>
+    <script src="js/class/player.js"></script>
+    <script src="js/class/enemy.js"></script>
+    <script src="js/class/meteorite.js"></script>
+    <script src="js/class/firend.js"></script>
+    <script src="js/class/star.js"></script>
+    <script src="js/class/fuel.js"></script>
+    <script src="js/scenes/start.js"></script>
+    <script src="js/scenes/play.js"></script>
+    <script src="js/scenes/over.js"></script>
+    <script src="js/scenes/rank.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+    <title>Star Battle</title>
+</head>
+
+<body>
+    <div id="app">
+        <div id="logo">
+            <img src="./img/logo-01.png" alt="logo">
+        </div>
+        <div id="container" class="absolute">
+            <div id="start" class="column">
+                <p class="message pre">How to Play Star Battle.
+
+                    1. Move the spaceship using the sensible areas in the screen;
+                    2. The timer present the time lapsed;
+                    3. The fuel counter show the remain fuel;
+                    4. During the flight, the spaceship needs to destroy the asteroids and enemy spaceships that are
+                    presented in the space;
+                    5. You can shoot pressing Space Bar;
+                    6. If the spaceship hits a asteroid or another spaceship, you lose 15 points of fuel;
+                    7. Enemy spaceship needs 1 shot to be destroyed, you will get 5 points for each enemy destroyed;
+                    8. Asteroid needs 2 shots to be destroyed, you will get 10 points for each asteroid destroyed;
+                    9. If you destroy a friendly spaceship, you lose 10 points;
+                    10. During the flight, the spaceship needs to collect fuel in the space;
+                    11. You can pause the game clicking in a button pause, or pressing the letter "p";
+                    12. Go beyond all limits;
+                    Battle in Space with Star Battle Championship...
+                </p>
+                <button id="start-btn" class="btn">
+                    Start Game
+                </button>
+            </div>
+            <div id="play" class="absolute">
+                <canvas id="canvas" class="absolute"></canvas>
+                <div class="content absolute">
+                    <div class="header">
+                        <ul class="info">
+                            <li>
+                                <img src="./img/time3.png" alt="time">
+                                <span id="time">0</span>
+                            </li>
+                            <li>
+                                <img src="./img/fuel2.png" alt="fuel">
+                                <span id="fuel">0</span>
+                            </li>
+                            <li>
+                                <img src="./img/score.png" alt="score">
+                                <span id="score">0</span>
+                            </li>
+                            <li>
+                                <img src="./img/playerBullet.png" alt="score">
+                                <span id="shoot">0</span>
+                            </li>
+
+                        </ul>
+                        <ul class="option">
+                            <li id="game-font-size-add">
+                                <img class="pause" src="./img/a+.png" alt="time">
+                            </li>
+                            <li id="game-font-size-reduce">
+                                <img class="pause" src="./img/a-.png" alt="time">
+                            </li>
+                            <li id="game-mute-btn">
+                                <img class="pause" src="./img/mute.png" alt="time">
+                                <img class="pause" src="./img/speaker.png" alt="time">
+                            </li>
+                            <li id="game-pause-btn">
+                                <img class="pause" src="./img/play.png" alt="time">
+                                <img class="pause" src="./img/pause.png" alt="time">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-controller">
+                        <div class="left"></div>
+                        <div class="up"></div>
+                        <div class="down"></div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="over" class="column absolute">
+                <div class="game-data">
+                    <p class="message">
+                        <span>
+                            <img src="./img/time3.png" alt="time">
+                        </span>
+                        <span>
+                            --
+                        </span>
+                        <span class="time">00</span>
+                    </p>
+                    <p class="message">
+                        <span>
+                            <img src="./img/score.png" alt="score">
+                        </span>
+                        <span>
+                            --
+                        </span>
+                        <span class="score">00</span>
+                    </p>
+                    <p class="message">
+                        <span>
+                            <img src="./img/playerBullet.png" alt="score">
+                        </span>
+                        <span>
+                            --
+                        </span>
+                        <span class="shoot">00</span>
+                    </p>
+                </div>
+                <input type="text" id="name" placeholder="Name" />
+                <button id="submit-btn" class="btn" disabled>
+                    Continue
+                </button>
+            </div>
+            <div id="rank" class="column absolute">
+                <table class="scroll">
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Name</th>
+                            <th>Score</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                <button id="restart-btn" class="btn">
+                    Start Game
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <h1 class="title">
+            Star Battle
+        </h1>
+        <div class="message pre">
+            How to Play Star Battle.
+
+            1. Move the spaceship using the sensible areas in the screen;
+            2. The timer present the time lapsed;
+            3. The fuel counter show the remain fuel;
+            4. During the flight, the spaceship needs to destroy the asteroids and enemy spaceships that are
+            presented in the space;
+            5. You can shoot pressing Space Bar;
+            6. If the spaceship hits a asteroid or another spaceship, you lose 15 points of fuel;
+            7. Enemy spaceship needs 1 shot to be destroyed, you will get 5 points for each enemy destroyed;
+            8. Asteroid needs 2 shots to be destroyed, you will get 10 points for each asteroid destroyed;
+            9. If you destroy a friendly spaceship, you lose 10 points;
+            10. During the flight, the spaceship needs to collect fuel in the space;
+            11. You can pause the game clicking in a button pause, or pressing the letter "p";
+            12. Go beyond all limits;
+            Battle in Space with Star Battle Championship...
+        </div>
+        <div class="pic">
+            <img src="./img/scenes/start.png" alt="start">
+            <img src="./img/scenes/play.png" alt="start">
+            <img src="./img/scenes/play2.png" alt="start">
+            <img src="./img/scenes/over.png" alt="start">
+            <img src="./img/scenes/rank.png" alt="start">
+        </div>
+        <div class="video">
+            <video src="./videos/star battle coming soon.mp4"></video>
+        </div>
+        <div class="btns">
+            <a href="#">
+                <img src="./img/available-on-android.png" alt="./img/available-on-android.png">
+            </a>
+            <a href="#">
+                <img src="./img/available-on-ios-.png" alt="available-on-ios-.png">
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

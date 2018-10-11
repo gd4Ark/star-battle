@@ -1,0 +1,187 @@
+#app {
+    position: relative;
+    margin: 0 auto;
+    background: #222;
+    color: #eee;
+    font-size: 14px;
+}
+
+#logo{
+    pointer-events: none;
+    position: relative;
+    z-index: 2;
+    padding: 0.8% 0;
+    width: 100%;
+    text-align: center;
+}
+#logo img{
+    transition: all 0.5s ease;
+    width: 10%;
+}
+#logo.play-status img{
+    width: 6%;
+}
+
+#container,
+#container>div {
+    width: 100%;
+    height: 100%;
+}
+
+#container>div {
+    padding-top: 8%;
+    visibility: hidden;
+    text-align: center;
+    opacity: 0;
+}
+
+#container>div.action {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.2s ease;
+}
+
+#play{
+    background: url('../img/background-1.jpg');
+    background-size:100% 100%;  
+}
+#canvas{
+    z-index: 1;
+    pointer-events: none;
+}
+.content{
+    width: 100%;
+    height: 100%;
+}
+.content .header{
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+}
+.content .header ul{
+    width: 45%;
+    height: 50px;
+    font-size: 20px;
+}
+.content .header li img{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+.content .header ul,
+.content .header ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.content .header .option img{
+    cursor: pointer;
+}
+.content .header .option img:nth-child(2){
+    display: none;
+}
+.content .header .option li:active{
+    opacity: 0.5;
+}
+.content .header .option li.active img:nth-child(1){
+    display: none;
+}
+.content .header .option li.active img:nth-child(2){
+    display: block;
+}
+
+.game-controller{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 150px;
+    height: 150px;
+    transform: rotate(-45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.game-controller>div{
+    width: 50%;
+    height: 50%;
+    background:rgba(255,255,255,0.1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.game-controller>div:hover{
+    background:rgba(255,255,255,0.2);
+}
+
+#over .message{
+    margin-left: 29%;
+    width: 71%;
+    display: flex;
+}
+#over .message img{
+    width: 30px;
+    height: 30px;
+}
+#over .message span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 20%;
+}
+#over .message span:nth-last-child(1){
+    width: 60%;
+    padding-left: 4%;
+    justify-content: space-between;
+}
+#over input{
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.2rem;
+    width: 35%;
+    margin: 0 auto;
+    height: 30px;
+}
+
+table{
+    height: 80%;
+    overflow: hidden;
+}
+
+.wrap{
+    text-align: center;
+    color: #222;
+}
+.wrap > *{
+    margin: 0 auto;
+    width: 51%;
+}
+.title{
+    line-height: 4;
+}
+.wrap .message{
+    line-height: 2;
+    margin-bottom: 25px;
+}
+.wrap .pic{
+    width: 51%;
+}
+.wrap .pic img{
+    margin-bottom: 25px;
+    width: 100%;
+}
+.wrap video{
+    padding: 25px 0;
+    width: 100%;
+    height: 100%;
+}
+.wrap .btns{
+    display: flex;
+    justify-content: space-around;
+}
+.wrap .btns img{
+    width: 150px;
+    height: 50px;
+}
