@@ -9,4 +9,6 @@ Star Battle 是类型雷电战机游戏的一款游戏，游戏操作说明：
 
 
 
+在线地址：<https://gd4ark.github.io/Star_Battle/>. 
+
 欢迎 Star 与 Issue。
