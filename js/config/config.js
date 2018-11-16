@@ -3,6 +3,8 @@ const fps = 60;
 
 (() => {
 
+    // common
+
     const plane = (callback=false) => {
         const o = {
             w: 70,
@@ -17,9 +19,9 @@ const fps = 60;
             return o;
         }
         const data = callback(o);
-        Object.keys(data).map(key => {
-            o[key] = data[key];
-        })
+        for (let key in data){
+            o[key] = data[key]
+        }
         return o;
     }
 
@@ -59,6 +61,8 @@ const fps = 60;
         return images;
     };
 
+    // config
+
     config.game = {
         w: 960,
         h: 480,
@@ -67,6 +71,7 @@ const fps = 60;
             max : 30,
             val : 16,
         },
+        // random cooldown index 0 - index 1
         appendEnemyCooldown: [2 * fps, 5 * fps],
         appendFriendCooldown : [2*fps,5*fps],
         appendFuelCooldown : [2*fps,5*fps],
@@ -94,21 +99,10 @@ const fps = 60;
             name : '',
         }
     }
-
-    // config.data = ()=>{
-    //     return {
-    //         fuel: 15,
-    //         score: ~~(Math.random() * 500),
-    //         shoot: 0,
-    //         time : ~~(Math.random() * 500),
-    //         name : 'abc',
-    //     }
-    // }
     
-
     config.player = (() => {
 
-        const { w, h } = config.game;
+        const { h } = config.game;
 
         const o = plane(o => {
             return {
@@ -177,8 +171,6 @@ const fps = 60;
 
     config.fuel = (() => {
 
-        const { w } = config.game;
-
         const o = {
             w: 40,
             h: 40,
@@ -195,8 +187,6 @@ const fps = 60;
     })();
 
     config.star = (() => {
-
-        const { w } = config.game;
 
         const o = {};
 
