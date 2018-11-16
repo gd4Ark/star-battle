@@ -111,11 +111,9 @@ const hotkey = (() => {
             return;
         }
         data[keyCode].active = false;
-        data[keyCode].events.forEach(el => {
-            if (el.once) {
-                el.enable = true;
-            }
-        });
+        data[keyCode].events
+            .filter((el)=>el.once)
+            .forEach(el=>el.enable=true);
     });
 
 
@@ -147,6 +145,7 @@ const loadResource = (list, Obj, callback) => {
     const keys = Object.keys(list);
     const result = {};
     const len = keys.length;
+    // Obj Type is Image or Audio
     const load = Obj === Image ? 'onload' : 'onloadedmetadata';
     let count = 0;
     const call = (obj, key) => {
@@ -187,22 +186,22 @@ const incrementAnimation = (start,end,callback)=>{
 
 const localStorageData = (()=>{
 
-    const add = (obj)=>{
-        const gameData = get();
-        gameData.data.push(obj);
-        localStorage.gameData = JSON.stringify(gameData);
+    const add = (key,obj)=>{
+        const item = get(key);
+        item.data.push(obj);
+        localStorage.setItem(key,JSON.stringify(item));
     }
 
-    const get = ()=>{
-        return localStorage.gameData ? JSON.parse(localStorage.gameData) : {
+    const get = (key)=>{
+        return JSON.parse(localStorage.getItem(key)) || {
             data : [],
         };
     }
 
-    update = (data)=>{
-        localStorage.gameData = JSON.stringify({
+    update = (key,data)=>{
+        localStorage.setItem(key,JSON.stringify({
             data,
-        });
+        }));
     }
 
     return {

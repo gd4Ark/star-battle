@@ -2,23 +2,30 @@ class Rank extends Scene{
     setup() {
         super.setup();
         this.event();
+        this.storageDataKey = "gameData";
+        this.addData();
+        this.rank();
+    }
+
+    addData(){
+        const key = this.storageDataKey;
         const {
             name,
             score,
             time,
         } = this.game.data;
-        localStorageData.add({
+        localStorageData.add(key,{
             name,
             score,
             time,
         });
-        this.rank();
     }
 
     rank(){
+       const key = this.storageDataKey;  
        let html = ""; 
        let position = 0; 
-       let data = [].concat(localStorageData.get().data);
+       let data = [].concat(localStorageData.get(key).data);
        const some = (a,b)=>{
            return (
                 (a.score === b.score) && (a.time === b.time)
@@ -30,7 +37,7 @@ class Rank extends Scene{
            }
            return a.score < b.score;
        });
-       localStorageData.update(data);
+       localStorageData.update(key,data);
        data.map((el,index)=>{
             const prev = data[index-1];
             if (prev){
