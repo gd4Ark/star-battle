@@ -67,7 +67,7 @@ const raf = (()=>{
 
 })();
 
-const HotKey = (() => {
+const hotkey = (() => {
 
     let data = {};
 
@@ -79,10 +79,10 @@ const HotKey = (() => {
     }
 
     const loop = () => {
-        Object.keys(data).map(key => {
+        for (let key of Object.keys(data)){
             let event = data[key];
             if (!event.active) {
-                return;
+                continue;
             }
             event.events.forEach(el => {
                 if (el.enable) {
@@ -92,7 +92,7 @@ const HotKey = (() => {
                     el.enable = false;
                 }
             });
-        });
+        }
     };
 
     raf.reg('HotKey_loop',loop);

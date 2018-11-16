@@ -378,10 +378,10 @@ class Play extends Scene {
             config.game.fontSize.val = val;
             this.updateFontSize();
         }
-        HotKey.reg('p', () => {
+        hotkey.reg('p', () => {
             togglePause();
         }, true);
-        HotKey.reg('m', () => {
+        hotkey.reg('m', () => {
             toggleMute();
         }, true);
         on(

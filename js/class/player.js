@@ -38,12 +38,12 @@ class Player extends Plane{
             'd': this.right,
         };
         Object.keys(keys).map((key) => {
-            HotKey.reg(key, () => {
+            hotkey.reg(key, () => {
                called(keys[key]);
             }); 
         });
         
-        HotKey.reg(' ', () => {
+        hotkey.reg(' ', () => {
             called(()=>{
                 res.replay('shoot');
                 this.fire();
