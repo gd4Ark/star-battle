@@ -1,11 +1,27 @@
 # Star Battle（星际大战）
 
+![](https://ws1.sinaimg.cn/large/006mS5wEgy1fx9ouu9sncj3063049gll.jpg)
+
 Star Battle 是类型雷电战机游戏的一款游戏，游戏操作说明：
 
 1. 按 W A S D 或者 右下方的控制区来操作战机的移动。
 2. 按 空格 发射。
 3. 按 P 切换 暂停 与 继续。
 4. 按 M 切换 静音 与 扬声。
+
+
+
+游戏截图：
+
+![](https://ws1.sinaimg.cn/large/006mS5wEgy1fx9otea1rwj30qo0dc0u6.jpg)
+
+![](https://ws1.sinaimg.cn/large/006mS5wEgy1fx9otz3wchj30qo0dcq53.jpg)
+
+![](https://ws1.sinaimg.cn/large/006mS5wEgy1fx9ou51hh9j30qo0dcjtn.jpg)
+
+![](https://ws1.sinaimg.cn/large/006mS5wEgy1fx9ou9setaj30qo0dcmxu.jpg)
+
+![](https://ws1.sinaimg.cn/large/006mS5wEgy1fx9ouf7ss5j30qo0dcdgj.jpg)
 
 
 
