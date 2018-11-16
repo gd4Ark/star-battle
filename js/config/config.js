@@ -19,7 +19,7 @@ const fps = 60;
             return o;
         }
         const data = callback(o);
-        for (let key in data){
+        for (let key of Object.keys(data)){
             o[key] = data[key]
         }
         return o;
