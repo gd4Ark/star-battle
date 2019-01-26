@@ -3,6 +3,8 @@ class Over extends Scene{
         
         this.game.data.end = true;
 
+        hotkey.clearAll();
+
         this.updateView()
 
         this.event();
