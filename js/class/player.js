@@ -3,7 +3,6 @@ class Player extends Plane{
     setup() {
         super.setup('player');
         this.initBullet('playerBullet', this.scene.playerBullets);
-        this.gameControllerId = 'game-controller-loop';
         this.event();
     }
 
@@ -49,34 +48,5 @@ class Player extends Plane{
                 this.fire();
             });
         }, true);
-
-        {
-            let dir = null;
-            const controller = $('.game-controller');
-            on(controller,'mousemove',e=>{
-                const target = e.target;
-                dir = target.className;
-            });
-            on(controller,'mouseout',()=>{
-                dir = null;
-            });
-            on(controller,'touchmove',e=>{
-                const target = e.target;
-                dir = target.className;
-            });
-            on(controller,'touchend',()=>{
-                dir = null;
-            });
-            const loop = ()=>{
-                called(()=>{
-                    this[dir] && this[dir]();
-                });
-            }
-            raf.reg(this.gameControllerId,loop);
-        }
-    }
-
-    uninstall (){
-        raf.remove(this.gameControllerId);
     }
 }

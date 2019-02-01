@@ -48,7 +48,6 @@ class Play extends Scene {
 
     uninstall() {
         raf.remove(this.raf_id);
-        this.player.uninstall();
         res.end('bg');
         $("#logo").classList.remove('play-status');
     }

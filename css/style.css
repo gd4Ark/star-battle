@@ -90,31 +90,6 @@
     display: block;
 }
 
-.game-controller{
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    width: 150px;
-    height: 150px;
-    transform: rotate(-45deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    border-radius: 50%;
-    overflow: hidden;
-}
-.game-controller>div{
-    width: 50%;
-    height: 50%;
-    background:rgba(255,255,255,0.1);
-    transition: all 0.2s ease;
-    cursor: pointer;
-}
-.game-controller>div:hover{
-    background:rgba(255,255,255,0.2);
-}
-
 #over .message{
     margin-left: 29%;
     width: 71%;
