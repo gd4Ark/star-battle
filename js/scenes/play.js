@@ -50,6 +50,7 @@ class Play extends Scene {
         raf.remove(this.raf_id);
         res.end('bg');
         $("#logo").classList.remove('play-status');
+        hotkey.clearAll();
     }
 
     initData() {
