@@ -4,7 +4,7 @@
 
 <img align="center" src="https://ws1.sinaimg.cn/large/006mS5wEgy1fx9ouu9sncj3063049gll.jpg">
 
-> 一个使用 JavaScript ES6、Canvas 开发的飞船射击游戏
+> 一个使用 JavaScript ES6、Canvas 开发的飞船射击类游戏。
 >
 > 原为 2017 年阿布扎比世界技能大赛中的题目，后经作者自行开发。
 

@@ -47,10 +47,10 @@ class Rank extends Scene{
             }
             html += `
                 <tr>
-                    <td>${position}</td>
+                    <td>${numberFormat(position)}</td>
                     <td>${el.name}</td>
-                    <td>${el.score}</td>
-                    <td>${el.time}</td>
+                    <td>${numberFormat(el.score)}</td>
+                    <td>${numberFormat(el.time)}</td>
                 </tr>
             `;
        });

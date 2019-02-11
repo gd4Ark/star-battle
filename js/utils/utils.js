@@ -14,44 +14,51 @@ const on = (el, type, callback) => {
     el.addEventListener(type, callback);
 }
 
+const numberFormat = (num) => {
+    const isPlus = num >= 0;
+    const n = Math.abs(num);
+    const res = n > 9 ? n : '0' + n;
+    return isPlus ? res : `-${res}`;
+};
+
 const random = (end, start) => {
     return Math.floor(Math.random() * (end - start)) + start;
 };
 
 const randomArrayItem = (array) => {
-    return array[random(0, array.length)];  
+    return array[random(0, array.length)];
 };
 
 const isArray = (array) => {
     return array instanceof Array;
 }
 
-const isImage = (img)=>{
+const isImage = (img) => {
     return img instanceof Image;
 }
 
-const raf = (()=>{
+const raf = (() => {
 
     let events = {};
 
-    const reg = (id,callback)=>{
-        if (events[id]){
+    const reg = (id, callback) => {
+        if (events[id]) {
             return console.error('id 已存在');
         }
         events[id] = callback;
     };
 
-    const remove = (id)=>{
+    const remove = (id) => {
         if (!events[id]) return;
         delete events[id];
     };
 
-    const clearAll = ()=>{
+    const clearAll = () => {
         events = {};
     };
 
-    const update = ()=>{
-        for (const fn of Object.values(events)){
+    const update = () => {
+        for (const fn of Object.values(events)) {
             fn();
         }
         requestAnimationFrame(update);
@@ -60,9 +67,9 @@ const raf = (()=>{
     update();
 
     return {
-        reg : reg,
-        remove : remove,
-        clearAll : clearAll,
+        reg: reg,
+        remove: remove,
+        clearAll: clearAll,
     }
 
 })();
@@ -79,7 +86,7 @@ const hotkey = (() => {
     }
 
     const loop = () => {
-        for (let key of Object.keys(data)){
+        for (let key of Object.keys(data)) {
             let event = data[key];
             if (!event.active) {
                 continue;
@@ -95,7 +102,7 @@ const hotkey = (() => {
         }
     };
 
-    raf.reg('HotKey_loop',loop);
+    raf.reg('HotKey_loop', loop);
 
     on(window, 'keydown', e => {
         let keyCode = e.key.toLocaleUpperCase();
@@ -112,8 +119,8 @@ const hotkey = (() => {
         }
         data[keyCode].active = false;
         data[keyCode].events
-            .filter((el)=>el.once)
-            .forEach(el=>el.enable=true);
+            .filter((el) => el.once)
+            .forEach(el => el.enable = true);
     });
 
 
@@ -133,7 +140,7 @@ const hotkey = (() => {
                 enable: true,
             })
         },
-        clearAll : ()=>{
+        clearAll: () => {
             data = {};
         }
     }
@@ -172,42 +179,42 @@ const loadAudios = (audios, callback) => {
     return loadResource(audios, Audio, callback);
 };
 
-const incrementAnimation = (start,end,callback)=>{
+const incrementAnimation = (start, end, callback) => {
     let current = start;
     const status = start < end;
-    const time = setInterval(()=>{
+    const time = setInterval(() => {
         status ? current++ : current--;
         callback(current);
-        if (current === end){
+        if (current === end) {
             clearInterval(time);
         }
-    },30)
+    }, 30)
 }
 
-const localStorageData = (()=>{
+const localStorageData = (() => {
 
-    const add = (key,obj)=>{
+    const add = (key, obj) => {
         const item = get(key);
         item.data.push(obj);
-        localStorage.setItem(key,JSON.stringify(item));
+        localStorage.setItem(key, JSON.stringify(item));
     }
 
-    const get = (key)=>{
+    const get = (key) => {
         return JSON.parse(localStorage.getItem(key)) || {
-            data : [],
+            data: [],
         };
     }
 
-    update = (key,data)=>{
-        localStorage.setItem(key,JSON.stringify({
+    update = (key, data) => {
+        localStorage.setItem(key, JSON.stringify({
             data,
         }));
     }
 
     return {
-        add : add,
-        get : get,
-        update : update,
+        add: add,
+        get: get,
+        update: update,
     }
 
 })();

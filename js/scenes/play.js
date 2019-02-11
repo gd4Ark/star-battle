@@ -5,8 +5,7 @@ class Play extends Scene {
     }
     created(){
         this.raf_id = 'play_update';
-        this.initCanvas(); 
-        this.event();
+        this.initCanvas();
     }
     setup() {
         this.muteFlag = false;
@@ -17,7 +16,7 @@ class Play extends Scene {
         this.updateScore();
         this.updateFontSize();
         $("#logo").classList.add('play-status');
-
+        this.event();
         this.start();
     }
 
@@ -267,7 +266,7 @@ class Play extends Scene {
 
     updateTime() {
         const game = this.game;
-        $('#time').innerHTML = game.data.time;
+        $('#time').innerHTML = numberFormat(game.data.time);
     }
 
     updateFuel(num = 0) {
@@ -277,7 +276,7 @@ class Play extends Scene {
             fuelLoseSpeed
         } = config.fuelConfig;
         const call = () => {
-            $('#fuel').innerHTML = game.data.fuel;
+            $('#fuel').innerHTML = numberFormat(game.data.fuel);
             if (game.data.fuel <= 0) {
                 this.game.over();
             }
@@ -304,7 +303,7 @@ class Play extends Scene {
     updateScore(num = 0) {
         const game = this.game;
         const call = () => {
-            $('#score').innerHTML = game.data.score;
+            $('#score').innerHTML = numberFormat(game.data.score);
         }
         if (num === 0) {
             return call();
@@ -320,7 +319,7 @@ class Play extends Scene {
     updateshoot() {
         const game = this.game;
         game.data.shoot++;
-        $('#shoot').innerHTML = game.data.shoot;
+        $('#shoot').innerHTML = numberFormat(game.data.shoot);
     }
 
     updateFontSize(){
