@@ -1,8 +1,9 @@
 <h1 align="center">
     星际大战
 </h1>
-
-<img align="center" src="https://ws1.sinaimg.cn/large/006mS5wEgy1fx9ouu9sncj3063049gll.jpg">
+<p align="center">
+    <img src="https://ws1.sinaimg.cn/large/006mS5wEgy1fx9ouu9sncj3063049gll.jpg">
+</p>
 
 > 一个使用 JavaScript ES6、Canvas 开发的飞船射击类游戏。
 >

@@ -33,9 +33,9 @@ class Rank extends Scene{
        }
        data.sort((a,b)=>{
            if (a.score === b.score){
-               return a.time < b.time;
+               return a.time < b.time ? 1 : -1;
            }
-           return a.score < b.score;
+           return a.score < b.score ? 1 : -1;
        });
        localStorageData.update(key,data);
        data.map((el,index)=>{
