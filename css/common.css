@@ -22,6 +22,8 @@ li{
 }
 
 .message {
+    font-size: 1rem;
+    line-height: 2;
     margin: 0 auto;
     text-align: justify;
 }
@@ -31,15 +33,16 @@ li{
 
 .btn {
     position: relative;
-    color: #FFF;
     display: block;
+    font-weight: bold;
+    font-size: 1rem;
+    color: inherit;
     text-decoration: none;
     margin: 0 auto 5px auto;
-    border-radius: 5px;
     border: solid 1px #D94E3B;
     background: #cb3b27;
     text-align: center;
-    padding: 6px 10px;
+    padding: 6px 20px;
     transition: all 0.1s;
     box-shadow: 0px 5px 0px #84261a;
     border-radius: 20px;
@@ -113,12 +116,12 @@ tbody tr {
     }
     /* 滚动槽 */
 .scroll tbody::-webkit-scrollbar-track {
-    -webkit-box-shadow:inset006pxrgba(0,0,0,0.3);
+    -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
     border-radius:10px;
 }
     /* 滚动条滑块 */
 .scroll tbody::-webkit-scrollbar-thumb {
     border-radius:10px;
     background:rgba(255,255,255,0.5);
-    -webkit-box-shadow:inset006pxrgba(0,0,0,0.5);
+    -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);
 }

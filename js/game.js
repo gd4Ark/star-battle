@@ -1,6 +1,6 @@
-class Game{
+class Game {
     constructor() {
-        this.setup(); 
+        this.setup();
     }
 
     setup() {
@@ -8,7 +8,7 @@ class Game{
         this.initScenes();
     }
 
-    initData(){
+    initData() {
         this.data = config.data();
         this.data.end = false;
     }
@@ -16,8 +16,7 @@ class Game{
     initSize() {
         const el = $('#app');
         style(
-            el,
-            {
+            el, {
                 width: config.game.w + 'px',
                 height: config.game.h + 'px',
             }
@@ -26,10 +25,10 @@ class Game{
 
     initScenes() {
         this.scenes = {
-            start: new Start('#start',this),
-            play: new Play('#play',this),
-            over : new Over('#over',this),
-            rank : new Rank('#rank',this),
+            start: new Start('#start', this),
+            play: new Play('#play', this),
+            over: new Over('#over', this),
+            rank: new Rank('#rank', this),
         }
     }
 
@@ -38,7 +37,7 @@ class Game{
             return;
         }
         Object.keys(this.scenes).map(key => {
-            this.scenes[key].hidden(); 
+            this.scenes[key].hidden();
         });
         this.scene && this.scene.uninstall();
         this.scene = this.scenes[scene];
@@ -46,19 +45,19 @@ class Game{
         this.scene.setup();
     }
 
-    start(){
+    start() {
         this.toggleScene('start');
     }
 
-    play(){
+    play() {
         this.toggleScene('play');
     }
 
-    over(){
+    over() {
         this.toggleScene('over');
     }
 
-    rank(){
+    rank() {
         this.toggleScene('rank');
     }
 

@@ -1,16 +1,21 @@
-class Start extends Scene{
+class Start extends Scene {
     setup() {
         super.setup();
         this.game.initData();
         this.event();
     }
 
-    event(){
+    event() {
+        const btn = $('#start-btn');
         on(
-            $('#start-btn'),
+            btn,
             'click',
             () => {
-                this.game.play();
+                btn.setAttribute('disabled', 'disabled');
+                res.loadAssets(() => {
+                    this.game.play();
+                    btn.removeAttribute('disabled');
+                })
             }
         )
     }

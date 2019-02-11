@@ -1,34 +1,24 @@
-# Star Battle（星际大战）
+<h1 align="center">
+    星际大战
+</h1>
 
-![](https://ws1.sinaimg.cn/large/006mS5wEgy1fx9ouu9sncj3063049gll.jpg)
+<img align="center" src="https://ws1.sinaimg.cn/large/006mS5wEgy1fx9ouu9sncj3063049gll.jpg">
 
-Star Battle 是类型雷电战机游戏的一款游戏，游戏操作说明：
+> 一个使用 JavaScript ES6、Canvas 开发的飞船射击游戏
+>
+> 原为 2017 年阿布扎比世界技能大赛中的题目，后经作者自行开发。
 
-1. 按 `W` `A` `S` `D` 或者 右下方的控制区来操作战机的移动。
-2. 按 `Space` 发射。
-3. 按 `P` 切换 暂停 与 继续。
-4. 按 `M` 切换 静音 与 扬声。
+## Demo 预览
 
+在线预览地址：[链接](https://4ark.me/star-battle)
 
-
-游戏截图：
-
-![](https://ws1.sinaimg.cn/large/006mS5wEgy1fx9otea1rwj30qo0dc0u6.jpg)
-
-![](https://ws1.sinaimg.cn/large/006mS5wEgy1fx9otz3wchj30qo0dcq53.jpg)
-
-![](https://ws1.sinaimg.cn/large/006mS5wEgy1fx9ou51hh9j30qo0dcjtn.jpg)
-
-![](https://ws1.sinaimg.cn/large/006mS5wEgy1fx9ou9setaj30qo0dcmxu.jpg)
-
-![](https://ws1.sinaimg.cn/large/006mS5wEgy1fx9ouf7ss5j30qo0dcdgj.jpg)
+### 开始界面
 
 
 
-环境说明：
+### 游戏界面
 
-​	本人在开发时，使用Chrome 69  和  Firefox  62 进行测试，如果在您的浏览器上面无法正常运行，请尝试更新浏览器版本。
+### 结束界面
 
+### 排行榜界面
 
-
-在线地址：https://4ark.me/star-battle
