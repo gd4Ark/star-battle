@@ -49,4 +49,4 @@ Online view：[link](https://4ark.me/star-battle)
 
 ## Conclusion
 
-If I think my project is not bad👏 . Give a Star⭐ encouragement.
+If you think my project is good👏 . Give a Star⭐ encouragement.
