@@ -1,48 +1,52 @@
+<p align="center">
+	English | <a href="https://github.com/gd4Ark/star-battle/blob/master/README-CN.md">简体中文</a>
+</p>
 <h1 align="center">
-    星际大战
+    Star Battle
 </h1>
 <p align="center">
     <img src="https://ws1.sinaimg.cn/large/006mS5wEgy1fx9ouu9sncj3063049gll.jpg">
 </p>
 
-> 一个使用 JavaScript ES6、Canvas 开发的飞船射击类游戏。
+
+> A spaceship shooting game developed using JavaScript ES6, Canvas.
 >
-> 原为 2017 年阿布扎比世界技能大赛中的题目，后经作者自行开发。
+> Topics in the 2017 Abu Dhabi World Skills Competition.
 
-## Demo 预览
+## Demo Preview
 
-在线预览地址：[链接](https://4ark.me/star-battle)
+Online view：[link](https://4ark.me/star-battle)
 
-### 开始界面
+### Start interface
 
 ![](https://ws1.sinaimg.cn/large/006mS5wEgy1g02z5a4blsj30sw0gpjsm.jpg)
 
-### 游戏界面
+### Game interface
 
 ![](https://ws1.sinaimg.cn/large/006mS5wEgy1g02z5kvrgaj30sw0gpjv0.jpg)
 
-### 结束界面
+### End interface
 
 ![](https://ws1.sinaimg.cn/large/006mS5wEgy1g02z5xag6aj30sw0gpgmh.jpg)
 
-### 排行榜界面
+### Rank interface
 
 ![](https://ws1.sinaimg.cn/large/006mS5wEgy1g02z62lsttj30sw0gpt9j.jpg)
 
-## 游戏规则
+## Game Rules
 
-1. 使用 `W`、`A`、`S`、`D` 控制飞船，按下 `Space ` 发射。
-2. 燃料初始值为15，每秒递减1点，当燃料值为0时，游戏结束。
-3. 触碰掉下的燃料瓶可增加15点，最大值为30点。
-4. 击中敌方飞船增加5分。行星需击中两次，增加10分。击中友方扣除10分。
-5. 撞击敌方损失15点燃料，撞击友方扣除10分。
-6. 游戏允许负分。
-7. 按下 `P` 暂停游戏，按下 `M` 静音。
+1. Press  `W`、`A`、`S`、`D` control spacecraft，Press `Space `  fire.
+2. The initial fuel value is 15. Decrement by 1 point per second. When the fuel value is 0, the game is over.
+3. The fuel bottle that touches it can be increased by 15 points and the maximum value is 30 points.
+4. Hit the enemy spacecraft to increase by 5 points. The planet needs to hit twice, increasing by 10 points. Hit the friend to deduct 10 points.
+5. Collision enemy loses 15 points of fuel, and the friendly party deducts 10 points.
+6. Game allows negative points.
+7. Press `P` Pause game. Press `M` mute。
 
-## 作者
+## Author
 
 > [Blog](https://4ark.me/) · GitHub [@gd4Ark](https://github.com/gd4Ark)
 
-## 最后
+## Conclusion
 
-如果觉得我的项目还不错的话👏 ，就给个 star ⭐ 鼓励一下吧~
+If I think my project is not bad👏 . Give a Star⭐ encouragement.
