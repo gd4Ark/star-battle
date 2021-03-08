@@ -12,22 +12,6 @@
 
 Online view：[link](https://4ark.me/star-battle)
 
-### Start interface
-
-![](https://ws1.sinaimg.cn/large/006mS5wEgy1g02z5a4blsj30sw0gpjsm.jpg)
-
-### Game interface
-
-![](https://ws1.sinaimg.cn/large/006mS5wEgy1g02z5kvrgaj30sw0gpjv0.jpg)
-
-### End interface
-
-![](https://ws1.sinaimg.cn/large/006mS5wEgy1g02z5xag6aj30sw0gpgmh.jpg)
-
-### Rank interface
-
-![](https://ws1.sinaimg.cn/large/006mS5wEgy1g02z62lsttj30sw0gpt9j.jpg)
-
 ## Game Rules
 
 1. Press  `W`、`A`、`S`、`D` control spacecraft，Press `Space` fire.

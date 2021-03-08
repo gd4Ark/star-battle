@@ -12,22 +12,6 @@
 
 在线预览地址：[链接](https://4ark.me/star-battle)
 
-### 开始界面
-
-![](https://ws1.sinaimg.cn/large/006mS5wEgy1g02z5a4blsj30sw0gpjsm.jpg)
-
-### 游戏界面
-
-![](https://ws1.sinaimg.cn/large/006mS5wEgy1g02z5kvrgaj30sw0gpjv0.jpg)
-
-### 结束界面
-
-![](https://ws1.sinaimg.cn/large/006mS5wEgy1g02z5xag6aj30sw0gpgmh.jpg)
-
-### 排行榜界面
-
-![](https://ws1.sinaimg.cn/large/006mS5wEgy1g02z62lsttj30sw0gpt9j.jpg)
-
 ## 游戏规则
 
 1. 使用 `W`、`A`、`S`、`D` 控制飞船，按下 `Space`发射。
